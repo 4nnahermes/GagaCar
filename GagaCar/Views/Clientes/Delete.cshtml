@@ -1,0 +1,56 @@
+﻿@model GagaCar.Models.Cliente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Remover Cliente</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <div class="d-flex gap-2">
+            <input type="submit" value="Deletar" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+        </div>
+    </form>
+</div>
